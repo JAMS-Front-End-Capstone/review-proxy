@@ -1,0 +1,19 @@
+{
+  "name": "fec-module4-service",
+  "version": "1.0.0",
+  "description": "service component for module 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JAMS-Front-End-Capstone/fec-module4-service.git"
+  },
+  "author": "Shane Lemmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JAMS-Front-End-Capstone/fec-module4-service/issues"
+  },
+  "homepage": "https://github.com/JAMS-Front-End-Capstone/fec-module4-service#readme"
+}
