@@ -12,17 +12,27 @@
             <div className="page"></div>
             <div className="page-divider"></div>
             <div id="attraction-overview"></div>
-            <div id="review"></div>
-            <div id="q-and-a"></div>
+            <div id="review" onclick="reviewOrQandA()"></div>
+            <div id="q-and-a" onclick="qandAorReview()" style="display: none;">q</div>
             <div id="related"></div>
           </div>
         <div className="Component_Footer" id="Component_Footer"></div>
       </div>
     </div>
   <script src="container-bundle.js"></script>
-  <script src="http://localhost:3002/bundle-3002.js"> </script>
-  <script src="http://localhost:3003/bundle-3003.js"> </script>
-  <script src="http://localhost:3004/bundle-3004.js"> </script>
-  <script src="http://localhost:3005/bundle-3005.js"> </script>
+  <!-- <script src="http://localhost:3002/bundle.js"> </script> -->
+  <script src="http://localhost:3003/review-bundle.js"> </script>
+  <script src="http://127.0.0.1:8081/q-and-a-bundle.js"> </script>
+  <script src="http://127.0.0.1:8080/related-bundle.js"> </script>
+  <script>
+    function reviewOrQandA() {
+      document.getElementById("review").style.display = "none";
+      document.getElementById("q-and-a").style.display = "block";
+    }
+    function qandAorReview() {
+      document.getElementById("q-and-a").style.display = "none";
+      document.getElementById("review").style.display = "block";
+    }
+  </script>
 </body>
 </html>
