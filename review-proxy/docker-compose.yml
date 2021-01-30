@@ -108,7 +108,7 @@ services:
         retries: 20
     restart: on-failure
 
-  reviews:
+  reviews-api:
     build:
       context: './review/'
       dockerfile: 'Dockerfile'
