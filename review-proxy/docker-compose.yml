@@ -18,7 +18,7 @@ services:
     ports:
       - 80:8080
     build:
-      context: './review-proxy/backend'
+      context: './review-proxy/review-proxy/backend'
       dockerfile: 'Dockerfile'
     environment:
       ENABLE_RESPONSE_LOG: 'true'
@@ -108,7 +108,7 @@ services:
         retries: 20
     restart: on-failure
 
-  reviews:
+  reviews-api:
     build:
       context: './review/'
       dockerfile: 'Dockerfile'
