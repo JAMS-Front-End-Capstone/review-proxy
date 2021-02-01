@@ -5,24 +5,58 @@
   <link rel="stylesheet" href="fonts.css">
 </head>
 <body>
-    <div className="app">
-      <div className="Component_Header" id="Component_Header"></div>
-        <div className="Component_AdvertisingBanner" id="Component_AdvertisingBanner"></div>
-          <div className="main">
-            <div className="page"></div>
-            <div className="page-divider"></div>
-            <div id="attraction-overview"></div>
-            <div id="review"></div>
-            <div id="q-and-a"></div>
-            <div id="related"></div>
-          </div>
-        <div className="Component_Footer" id="Component_Footer"></div>
-      </div>
-    </div>
-  <script src="container-bundle.js"></script>
-  <!-- <script src="./fec-jon/client/dist/bundle.js"></script> -->
-  <!-- <script src="./review/public/review-bundle.js"></script> -->
-  <script src="/Users/shane/Documents/Hack Reactor/shane-proxy/fec-container/shane/q-and-a/frontend/dist/q-and-a-bundle.js"></script>
-  <script src="/Users/shane/Documents/Hack Reactor/shane-proxy/fec-container/shane/module4/frontend/dist/related-bundle.js"></script>
+  <div className="app" id="proxyUrl" data-proxyUrl="http://ec2-34-210-226-219.us-west-2.compute.amazonaws.com">
+    <div className="Component_Header" id="Component_Header"></div>
+      <div className="Component_AdvertisingBanner" id="Component_AdvertisingBanner"></div>
+        <div className="main" style="background-color:#f2f2f2">
+          <div className="page"></div>
+          <div className="page-divider"></div>
+          <div id="attraction-overview"></div>
+          <div id="review" ></div>
+          <div id="q-and-a" style="display: none;"></div>
+          <div id="related"></div>
+        </div>
+      <div className="Component_Footer" id="Component_Footer"></div>
+  </div>
+  <script src="/bundles/container-bundle.js"></script>
+  <script src="/bundles/overview-bundle.js"> </script>
+  <script src="/bundles/review-bundle.js"> </script>
+  <script src="/bundles/q-and-a-bundle.js"> </script>
+  <script src="/bundles/related-bundle.js"> </script>
+  <script>
+document.getElementById("QandA").onclick = function(){
+      document.getElementById("review").style.display = 'none';
+      document.getElementById("q-and-a").style.display = 'block';
+
+};
+
+document.getElementById("Reviewshow").onclick = function(){
+  document.getElementById("q-and-a").style.display = "none";
+      document.getElementById("review").style.display= "block";
+};
+// document.getElementById("QandA").addEventListener("click", Func1(), false);
+// document.getElementById("Reviewshow").addEventListener("click", Func2, false);
+//     function Func1(){
+
+//     /*Your code goes here */
+//     let reviews = document.getElementById("review");
+//     let qanda = document.getElementById("q-and-a");
+//           reviews.style.display = 'none';
+//           qanda.style.display = 'block';
+
+// };
+
+// function Func2(){
+//     /*Your code goes here */
+//     let reviews = document.getElementById("review");
+//     let qanda = document.getElementById("q-and-a");
+//           reviews.style.display = 'none';
+//           qanda.style.display = 'block';
+
+// }
+
+
+
+  </script>
 </body>
 </html>
